@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AlertTableViewController.h
 //  AlertViewSample
 //
 //  Created by Dinesh Kumar on 30/06/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AlertTableViewController : UITableViewController
 
 @end
-

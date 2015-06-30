@@ -1,25 +1,297 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ii8-lU-X4r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Root TabBar-->
+        <scene sceneID="h4I-cn-Iag">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ii8-lU-X4r" userLabel="Root TabBar" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5Zh-Kp-B61">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k7s-cX-uxj" kind="relationship" relationship="viewControllers" id="yRM-Xy-zmL"/>
+                        <segue destination="C6m-rA-cRQ" kind="relationship" relationship="viewControllers" id="lww-kk-LtJ"/>
+                        <segue destination="Cda-Wj-7gN" kind="relationship" relationship="viewControllers" id="5p4-RC-cO7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTQ-T2-QTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="1426"/>
+        </scene>
+        <!--Dropdown Alert Navigation-->
+        <scene sceneID="8ZH-mK-JRt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7s-cX-uxj" userLabel="Dropdown Alert Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dropdown Alerts" image="Checked-25" id="rLj-gl-mIn">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Checked Filled-25"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VqD-Ze-XwS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mjf-Q6-uZz" kind="relationship" relationship="rootViewController" id="LKQ-Mz-5r3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGn-th-bnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-21"/>
+        </scene>
+        <!--Dropdown Alert Table-->
+        <scene sceneID="5nT-fT-1nQ">
+            <objects>
+                <tableViewController id="Mjf-Q6-uZz" userLabel="Dropdown Alert Table" customClass="AlertTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tPX-kF-FTH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="ZU2-e1-Fc9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SL6-HL-Cg7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SL6-HL-Cg7" id="dXo-J7-hmR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Progress alert title " textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vZ8-6N-4XF">
+                                                    <rect key="frame" x="100" y="11" width="492" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Mjf-Q6-uZz" id="Apg-6t-BAv"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-56-8oh">
+                                                    <rect key="frame" x="15" y="11" width="33" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="vZ8-6N-4XF" secondAttribute="centerY" id="DTa-5k-gDE"/>
+                                                <constraint firstAttribute="trailing" secondItem="vZ8-6N-4XF" secondAttribute="trailing" constant="8" id="UVf-rD-I70"/>
+                                                <constraint firstItem="vZ8-6N-4XF" firstAttribute="leading" secondItem="dXo-J7-hmR" secondAttribute="leading" constant="100" id="Zic-9T-PmQ"/>
+                                                <constraint firstItem="Kbw-56-8oh" firstAttribute="leading" secondItem="dXo-J7-hmR" secondAttribute="leading" constant="15" id="qAc-sr-XIK"/>
+                                                <constraint firstAttribute="centerY" secondItem="Kbw-56-8oh" secondAttribute="centerY" id="s6M-7y-DOp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="au4-NT-yer">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="au4-NT-yer" id="esZ-5O-LSd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select alert image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-E4-fMS">
+                                                    <rect key="frame" x="15" y="11" width="138" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mnO-ur-act">
+                                                    <rect key="frame" x="459" y="8" width="133" height="29"/>
+                                                    <segments>
+                                                        <segment title="Failed"/>
+                                                        <segment title="Success"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="jNg-E4-fMS" secondAttribute="centerY" id="Kgp-6U-0wH"/>
+                                                <constraint firstAttribute="trailing" secondItem="mnO-ur-act" secondAttribute="trailing" constant="8" id="eSE-g0-yDe"/>
+                                                <constraint firstAttribute="centerY" secondItem="mnO-ur-act" secondAttribute="centerY" constant="-0.5" id="mWd-Gu-lrr"/>
+                                                <constraint firstItem="mnO-ur-act" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jNg-E4-fMS" secondAttribute="trailing" constant="8" symbolic="YES" id="tm2-Ly-eWe"/>
+                                                <constraint firstItem="jNg-E4-fMS" firstAttribute="leading" secondItem="esZ-5O-LSd" secondAttribute="leading" constant="15" id="zX8-VT-oaz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v5C-IG-Gck">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v5C-IG-Gck" id="PZq-0V-iXp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto dismiss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-oP-ZLS">
+                                                    <rect key="frame" x="15" y="11" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSs-vg-Bi3">
+                                                    <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="7qh-oP-ZLS" secondAttribute="centerY" id="G1K-xf-SFm"/>
+                                                <constraint firstAttribute="trailing" secondItem="FSs-vg-Bi3" secondAttribute="trailing" constant="8" id="HWe-SL-Uoq"/>
+                                                <constraint firstItem="7qh-oP-ZLS" firstAttribute="leading" secondItem="PZq-0V-iXp" secondAttribute="leading" constant="15" id="LpA-Qt-YIT"/>
+                                                <constraint firstAttribute="centerY" secondItem="FSs-vg-Bi3" secondAttribute="centerY" id="um0-Hl-HVU"/>
+                                                <constraint firstItem="FSs-vg-Bi3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7qh-oP-ZLS" secondAttribute="trailing" constant="8" id="zjK-Gd-taV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="khw-2T-Xay">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fYh-Xp-2ku">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fYh-Xp-2ku" id="kEF-CH-fJn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc9-Fp-kgr" customClass="CurvedButton">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Show Dropdown Alert">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showDropDownAlert:" destination="Mjf-Q6-uZz" eventType="touchUpInside" id="x1F-dz-YES"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zc9-Fp-kgr" secondAttribute="bottom" id="3fa-eQ-1Zs"/>
+                                                <constraint firstAttribute="trailing" secondItem="zc9-Fp-kgr" secondAttribute="trailing" id="P0n-pE-hk9"/>
+                                                <constraint firstItem="zc9-Fp-kgr" firstAttribute="top" secondItem="kEF-CH-fJn" secondAttribute="top" id="Qps-Lc-PFO"/>
+                                                <constraint firstItem="zc9-Fp-kgr" firstAttribute="leading" secondItem="kEF-CH-fJn" secondAttribute="leading" id="e20-Ao-BIK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Mjf-Q6-uZz" id="8uu-XB-B4D"/>
+                            <outlet property="delegate" destination="Mjf-Q6-uZz" id="fFl-Gb-av9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dropdown Alerts" id="0kQ-1g-dpZ"/>
+                    <connections>
+                        <outlet property="dropDownAutoDismissSwitch" destination="FSs-vg-Bi3" id="s7Q-r0-GVX"/>
+                        <outlet property="dropDownImageSegmentedControl" destination="mnO-ur-act" id="Sjh-ou-AdG"/>
+                        <outlet property="dropDownTitleTextField" destination="vZ8-6N-4XF" id="8SP-xZ-7Rg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqA-fi-WCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3439" y="-21"/>
+        </scene>
+        <!--Process Alert Table-->
+        <scene sceneID="hqK-En-rJg">
+            <objects>
+                <tableViewController id="adg-HS-ZjF" userLabel="Process Alert Table" customClass="AlertTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="m74-VS-GDN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="caA-II-wA5">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="caA-II-wA5" id="JTg-jC-OaC">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="adg-HS-ZjF" id="PiW-8M-qQj"/>
+                            <outlet property="delegate" destination="adg-HS-ZjF" id="LOI-Wy-Ais"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Process Alerts" id="0Ff-gj-uSh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxt-8g-2YW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="704"/>
+        </scene>
+        <!--Progress Alerts-->
+        <scene sceneID="omV-dF-9Xe">
+            <objects>
+                <tableViewController id="5Fd-H5-hcp" customClass="AlertTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OKb-rC-ZGR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="aHm-Hf-lQO">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="5Fd-H5-hcp" id="u2r-br-yqC"/>
+                            <outlet property="delegate" destination="5Fd-H5-hcp" id="RsX-LE-xCs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Progress Alerts" id="E6A-xx-gWH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-Ep-YyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="1426"/>
+        </scene>
+        <!--Progress Alert Navigation-->
+        <scene sceneID="NC2-4l-etb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C6m-rA-cRQ" userLabel="Progress Alert Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Progress Alerts" image="Download From Cloud-25" id="MJN-3r-hVO">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Download From Cloud Filled-25"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qgu-gQ-mBI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Fd-H5-hcp" kind="relationship" relationship="rootViewController" id="ene-Ss-BeU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pm-Bf-y0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="1426"/>
+        </scene>
+        <!--Process Alert Navigation-->
+        <scene sceneID="XfH-KS-pAi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cda-Wj-7gN" userLabel="Process Alert Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Process Alerts" image="Refresh-25" id="3vC-Dg-gqc">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Refresh Filled-25"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ie-cD-I7R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="adg-HS-ZjF" kind="relationship" relationship="rootViewController" id="T1i-3H-hJ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1H-sc-SeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="704"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Checked Filled-25" width="25" height="25"/>
+        <image name="Checked-25" width="25" height="25"/>
+        <image name="Download From Cloud Filled-25" width="25" height="25"/>
+        <image name="Download From Cloud-25" width="25" height="25"/>
+        <image name="Refresh Filled-25" width="25" height="25"/>
+        <image name="Refresh-25" width="25" height="25"/>
+    </resources>
 </document>
